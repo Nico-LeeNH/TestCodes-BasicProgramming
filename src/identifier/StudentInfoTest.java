@@ -21,4 +21,38 @@ public class StudentInfoTest {
             System.out.println(ae);
         }
     }
+    public void test2Identifier() {
+        // Code input
+        String codeInputName = "Bob";
+        int codeInputAge = 30;
+        double codeInputGpa = 3.50;
+        // Execution / codeOutput
+        StudentInfo studentInfo = new StudentInfo();
+        String codeOutput = studentInfo.showStudentInfo(codeInputName, codeInputAge, codeInputGpa);
+        // Expected output
+        String expectedOutput = "Name: Bob\n" + "Age: 30\n" + "GPA: 3.50";
+
+        try {
+            assertEquals("Test Bob (30, 3.50):", expectedOutput, codeOutput);
+        } catch (AssertionError ae) {
+            System.out.println(ae);
+        }
+    }
+    public void test3Identifier() {
+        // Code input
+        String codeInputName = "Charlie";
+        int codeInputAge = 25;
+        double codeInputGpa = 3.90;
+        // Execution / codeOutput
+        StudentInfo studentInfo = new StudentInfo();
+        String codeOutput = studentInfo.showStudentInfo(codeInputName, codeInputAge, codeInputGpa);
+        // Expected output
+        String expectedOutput = "Name: Charlie\n" + "Age: 25\n" + "GPA: 3.90";
+
+        try {
+            assertEquals("Test Charlie (25, 3.90):", expectedOutput, codeOutput);
+        } catch (AssertionError ae) {
+            System.out.println(ae);
+        }
+    }
 }
